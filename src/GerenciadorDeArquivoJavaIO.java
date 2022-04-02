@@ -35,12 +35,12 @@ public class GerenciadorDeArquivoJavaIO implements GerenciadorDeArquivo {
         if (diretorio.delete()) {
             // sucesso
         } else {
+//            System.out.printf("Falhou");
             for (File arquivoFilho : diretorio.listFiles()) {
                 arquivoFilho.delete();
             }
 
             diretorio.delete();
-//            System.out.printf("Falhou");
         }
     }
 
